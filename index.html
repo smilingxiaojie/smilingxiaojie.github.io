@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="music-control" onclick="playPause()" data-music="停止" class="music-control">
+            <img class="music-rotate" src="images/02.jpg">
+            <i class="iconfont icon-start"></i>
+            <audio id="music" controls loop autoplay>
+                <source src="audio/The-Truth-That-You-Leave.mp3" type="audio/mp3" />
+            </audio>
+        </div>
+        <div class="head-img">
+            <img src="images/01.jpg">
+        </div>
+        <ul class="pianoWrap">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="bg-img"></div>
+        <ul class="textWrap">
+            <li>
+            拥有一套别墅，靠海的，300平米左右，山东青岛海边，还要用吃不完的鱿鱼丝，家人、爱人、美食，晒晒太阳，看看书，喝喝茶，健健身，足矣
+            </li>
+            <li>拥有一辆自己的跑车，闲暇之余，带爸妈老弟自驾，融入自然，欣赏自然之美。</li>
+            <li>
+                <p>1.监督爸妈锻炼身体，每年按时体检，拥有一个好身体是我最大的心愿，自己慢慢长大，接下来的时光就让我和老弟一起为这个家贡献一份力量</p>
+                <p>2.爸妈不再为我们而操心，为自己的生活，自己的爱好,跳跳舞，唠唠嗑，没事搓搓麻将。</p>
+            </li>
+            <li>
+                <p>想要他身披金甲圣衣，脚踏七彩云彩来娶我，身高183cm。</p>
+                <p>1.有责任感，有上进心，乐观孝敬父母。</p>
+                <p>2.弱水三千，只取一瓢饮。</p>
+                <p>3.陌上花开 可缓缓归矣</p>
+            </li>
+        </ul>
+        <div class="readme">
+            <canvas class="canvas" width="100%" height="100%"></canvas>
+            <div class="overlay" style="display: none">
+                <div class="help">?</div>
+                <div class="ui">
+                    <input class="ui-input" type="text">
+                </div>
+                <div class="tabs">
+                    <div class="tabs-labels"><span class="tabs-label tabs-label--active">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+                    <ul class="tabs-panel commands tabs-panel--active"></ul>
+                </div>
+            </div>
+            <script src="js/canvasfont.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+function playPause() {
+    var music = document.getElementById('music')
+    if (music.paused) {
+        $('#music-control').attr('data-music','停止');
+        $('#music-control i').removeClass('icon-stop');
+        $('#music-control img').addClass('music-rotate');
+        music.play();
+    } else {
+        $('#music-control').attr('data-music','启动');
+        $('#music-control i').addClass('icon-stop');
+        $('#music-control img').removeClass('music-rotate');
+        music.pause();
+        
+    }
+}
+</script>
+
