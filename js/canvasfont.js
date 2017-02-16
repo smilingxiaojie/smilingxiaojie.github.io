@@ -25,7 +25,7 @@ var S = {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
       // |#rectangle|#countdown 3||
-      S.UI.simulate('|#rectangle|小洁你好|我非左先生|也非右先生|是谁不重要|你是好女孩|善良努力|可爱温柔|大方又体贴|你的未来|是很美好的|你会很幸福的|未来还长|不必太心急|陌上花开|缓缓归矣|···|#rectangle|');
+      S.UI.simulate('|#rectangle|小洁你好|我非左先生|也非右先生|I am 楚先生|你是好女孩|善良努力|可爱温柔|大方又体贴|你的未来|是很美好的|你会很幸福的|未来还长|不必太心急|陌上花开|缓缓归矣|···|#rectangle|');
     }
     S.Drawing.loop(function () {
       S.Shape.render();
