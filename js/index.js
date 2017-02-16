@@ -9,7 +9,7 @@ $(function(){
         $('.head-img').css('bottom','0');
         $('.textWrap,.bg-img').css('opacity','1');
         $('.pianoWrap').css('top','-150px');
-    },216000)
+    },73000)
 
     $('#music-control').click(function(event) {
     	var playPiano = $('#music-control').attr('data-music');
